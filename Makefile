@@ -3,12 +3,7 @@ OBJS = main.o myfunc.o
 main: $(OBJS)
 	gcc $(OBJS) -o main $(LDFLAGS)
 
-LIBS := -lm -lpcl -lopencv
-LIBDIRS := -L/usr/local/lib -L/usr/local/lib/cv2
-LDFLAGS := $(LIBDIRS) $(LIBS) $(LDFLAGS)
-
-INCLUDE := -I/usr/local/include/opencv2 \
-           -I/usr/local/include
+INCLUDE := -I/mnt/myfunc.h
 
 CFLAGS := $(INCLUDE) $(CFLAGS)
 
